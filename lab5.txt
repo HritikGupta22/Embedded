@@ -1,0 +1,17 @@
+AIM:- To count the frequency of a number in an array of numbers of size 10 stored in memory locations.
+
+CODE-
+ORG 0000H
+MOV R0,#40H
+MOV R2,#00H //R2 IS FOR COUNTING
+MOV R3,#0AH
+LOOP2:MOV A,@R0
+CJNE A,#02H,LOOP1
+INC R2
+INC R0
+DJNZ R3,LOOP2
+LOOP1: INC R0
+DJNZ R3,LOOP2
+END
+
+CONCLUSION- Register R2 is for counting . Hence frequency of 2 is stored in R2 which is 5.

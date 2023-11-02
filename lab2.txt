@@ -1,0 +1,15 @@
+//add 5 no parallely  from diff locatn;
+
+ORG 0000H
+MOV R0, #40H
+MOV R1, #50H
+MOV R3, #05H
+
+LOOP: MOV A,@R0
+MOV B,@R1
+ADD A,B
+MOV @R0,A
+INC R0
+INC R1
+DJNZ R3,LOOP
+END

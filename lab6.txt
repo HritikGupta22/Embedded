@@ -1,0 +1,14 @@
+AIM:- To find factorial of a number.
+
+Code-
+ORG 0000H
+MOV A,#01H
+MOV R3,#05H
+MOV R2,#05H
+LABEL1:MOV B,R3
+MUL AB
+DEC R3
+DJNZ R2,LABEL1
+END
+
+We have find the factorial of 5 which is stored in accumulator
